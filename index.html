@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع سيرفر MYSTRY TOWN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="button" onclick="showServerAdmins()">مسؤولي السيرفر</button>
+        <button class="button" onclick="showServerInfo()">تعريف السيرفر</button>
+        <button class="button" onclick="showProducts()">منتجات</button>
+        <button class="button" onclick="window.location.href='https://discord.gg/NC3Vh3Xd'">رابط ديسكورد</button>
+
+        <div id="content" class="content"></div>
+    </div>
+
+    <script>
+        function showServerAdmins() {
+            document.getElementById('content').innerHTML = `
+                <h2>مسؤولي السيرفر</h2>
+                <ul>
+                    <li>مدير عام: Alaa & Ninga</li>
+                    <li>نائب مدير: Colombia & Tahir</li>
+                </ul>
+            `;
+        }
+
+        function showServerInfo() {
+            document.getElementById('content').innerHTML = `
+                <h2>تعريف السيرفر</h2>
+                <p>ماهو سيرفر MYSTRY TOWN؟</p>
+                <p>هو سيرفر تأسس سنة 2023 شهر 5 يوم 27 بواسطة خالد المصري وعلاء ونينجا 🫡.</p>
+                <p>من اقوى سيرفرات التي مرت على SA-MP، لن يعرفوا إلى القدماء في لعبة كان RP 80% لأنه كان لازم وايت ليست أيام.</p>
+                <p>لماذا تم تسميت سيرفر باسم MYSTRY TOWN؟</p>
+                <p>هذا الاسم ينطبق على اسم المدينة الجديدة باللغة العربية لكي تستمتع في مدينة جديدة وتكوين حياة جديدة وتنظر إلى أشياء جديدة في السيرفر.</p>
+                <p>تم اقتباسه من اسم سيرفر FIVEM.</p>
+            `;
+        }
+
+        function showProducts() {
+            document.getElementById('content').innerHTML = `
+                <h2>المنتجات</h2>
+                <p>قريبًا...</p>
+            `;
+        }
+    </script>
+</body>
+</html>
