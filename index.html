@@ -6,45 +6,55 @@
     <title>موقع سيرفر MYSTRY TOWN</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
         }
         .button {
-            padding: 10px 20px;
-            margin: 10px;
+            padding: 12px 24px;
             background-color: #4CAF50;
             color: white;
             border: none;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .button:hover {
-            background-color: #45a049;
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .content {
-            background-color: white;
+            background-color: #f9f9f9;
             padding: 20px;
             border-radius: 8px;
-            margin-top: 20px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="buttons-container">
         <button class="button" onclick="showServerAdmins()">مسؤولي السيرفر</button>
         <button class="button" onclick="showServerInfo()">تعريف السيرفر</button>
         <button class="button" onclick="showProducts()">منتجات</button>
         <button class="button" onclick="window.location.href='https://discord.gg/NC3Vh3Xd'">رابط ديسكورد</button>
-
-        <div id="content" class="content"></div>
     </div>
+
+    <div id="content" class="content"></div>
 
     <script>
         function showServerAdmins() {
@@ -60,10 +70,10 @@
         function showServerInfo() {
             document.getElementById('content').innerHTML = `
                 <h2>تعريف السيرفر</h2>
-                <p>ماهو سيرفر MYSTRY TOWN؟</p>
+                <p><strong>ماهو سيرفر MYSTRY TOWN؟</strong></p>
                 <p>هو سيرفر تأسس سنة 2023 شهر 5 يوم 27 بواسطة خالد المصري وعلاء ونينجا 🫡.</p>
-                <p>من اقوى سيرفرات التي مرت على SA-MP، لن يعرفوا إلى القدماء في لعبة كان RP 80% لأنه كان لازم وايت ليست أيام.</p>
-                <p>لماذا تم تسميت سيرفر باسم MYSTRY TOWN؟</p>
+                <p>من أقوى سيرفرات التي مرت على SA-MP، لن يعرفوا إلا القدماء في لعبة كان RP 80% لأنه كان لازم وايت ليست أيام.</p>
+                <p><strong>لماذا تم تسميت سيرفر باسم MYSTRY TOWN؟</strong></p>
                 <p>هذا الاسم ينطبق على اسم المدينة الجديدة باللغة العربية لكي تستمتع في مدينة جديدة وتكوين حياة جديدة وتنظر إلى أشياء جديدة في السيرفر.</p>
                 <p>تم اقتباسه من اسم سيرفر FIVEM.</p>
             `;
